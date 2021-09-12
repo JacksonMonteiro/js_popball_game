@@ -1,3 +1,9 @@
+let score = 0;
+
+function updateScore() {
+    $('.score h2').html(score);
+}
+
 function spawnBall() {
     let x = Math.floor(Math.random() * $('.game-screen').width());
     let y = Math.floor(Math.random() * $('.game-screen').height());
@@ -8,6 +14,9 @@ function spawnBall() {
 
     ball.on('click', function() {
         $(this).fadeOut();
+
+        score += 1;
+        updateScore();
     });
 
     $('.game-screen').append(ball);
