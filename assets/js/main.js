@@ -1,0 +1,20 @@
+function spawnBall() {
+    let x = Math.floor(Math.random() * $('.game-screen').width());
+    let y = Math.floor(Math.random() * $('.game-screen').height());
+
+    let ball = $('<div class="ball"></div>');
+    ball.css('left', x + 'px');
+    ball.css('top', y + 'px');
+
+    ball.on('click', function() {
+        $(this).fadeOut();
+    });
+
+    $('.game-screen').append(ball);
+}
+
+$(function() {
+    $('#start').on('click', function() {
+        setInterval(spawnBall, 1000);
+    });
+});
