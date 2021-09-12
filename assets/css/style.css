@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;   
+}
+
+.menu {
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content:  center;
+    align-items: center;
+    border-right: 3px dashed #000;
+}
+
+.score {
+    margin-bottom: 36px;
+}
+
+.menu h1 {
+    font-size: 48px;
+    margin-bottom: 32px;
+}
+
+.score h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.menu button {
+    width: 80%;
+    height: 42px;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2px;;
+}
+
+.game-screen {
+    height: 100vh;
+}
