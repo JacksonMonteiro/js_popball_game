@@ -1,4 +1,5 @@
 let score = 0;
+let interval;
 
 function updateScore() {
     $('.score h2').html(score);
@@ -24,6 +25,14 @@ function spawnBall() {
 
 $(function() {
     $('#start').on('click', function() {
-        setInterval(spawnBall, 1000);
+        interval = setInterval(spawnBall, 1000);
+    });
+
+    $('#stop').on('click', function() {
+        $('.ball').fadeOut('fast', 'linear');
+        clearInterval(interval);
+        
+        score = 0;
+        updateScore();
     });
 });
